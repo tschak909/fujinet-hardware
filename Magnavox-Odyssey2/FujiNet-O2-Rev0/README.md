@@ -210,6 +210,8 @@ The board needs these changes in a fujinet-firmware PR off master:
 
 `tools/check_nets.py` prints a NOTE line for 1, 2, 5 and 6 until they are done.
 
+**In review:** FujiNetWIFI/fujinet-firmware#2235 does 1-4, leaves pin B low (5), and adds RUN / BOOTSEL (6). Still open: card detect on IO42, the `pico_*` keys, and raising pin B per title.
+
 ## Known limits
 
 - **No Voice passthrough.** The Voice reuses pins A, B, E, 1, 10 and 11 and passes only P10 / P11 through, so a cart behind it cannot use /WR, E, T0, A10 or P14. FujiNet's mailbox needs /WR and P14.
